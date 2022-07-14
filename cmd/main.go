@@ -116,7 +116,7 @@ func main() {
 					continue
 				}
 				var found bool
-				for _, stableBranch := range stableBranches {
+				for _, stableBranch := range gitBranches {
 					cmd := exec.Command(gitCmd, "merge-base", "--is-ancestor", tag.Name, stableBranch)
 					cmd.Dir = gitRepository
 					err := cmd.Run()
