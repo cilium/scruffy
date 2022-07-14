@@ -120,12 +120,11 @@ func main() {
 					err := cmd.Run()
 					found = err == nil
 					if found {
+						fmt.Printf("Commit SHA found in git repo on branch %q, keeping tag %q\n", stableBranch, tag.Name)
 						break
 					}
 				}
-				if found {
-					fmt.Printf("Commit SHA found in git repo, keeping tag %q\n", tag.Name)
-				} else if tag.Expiration.IsZero() {
+				if !found && tag.Expiration.IsZero() {
 					if expiration != 0 {
 						sm.Acquire(context.Background(), 1)
 						go func(repositoryName, tagName string) {
