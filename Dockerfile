@@ -1,4 +1,4 @@
-FROM docker.io/library/golang:1.17.2@sha256:cf615c1499e8bc2cf00696ba234cddd47fdb8d9a3b37b7c35726e46ee4ae08cc as builder
+FROM docker.io/library/golang:1.18.4@sha256:9349ed889adb906efa5ebc06485fe1b6a12fb265a01c9266a137bb1352565560 as builder
 LABEL maintainer="maintainer@cilium.io"
 ADD . /go/src/github.com/cilium/scruffy
 WORKDIR /go/src/github.com/cilium/scruffy
