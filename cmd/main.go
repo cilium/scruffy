@@ -80,11 +80,11 @@ func signals() {
 
 func main() {
 	if gitRepository == "" {
-		panic(fmt.Sprintf("Empty git repository"))
+		panic("Empty git repository")
 	}
 	gitCmd, err := exec.LookPath("git")
 	if err != nil {
-		panic(fmt.Sprintf("Unable to find git command"))
+		panic("Unable to find git command")
 	}
 	sm := semaphore.NewWeighted(10)
 	quayToken := os.Getenv("QUAY_TOKEN")
