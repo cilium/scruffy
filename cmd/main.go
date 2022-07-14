@@ -51,6 +51,8 @@ var (
 	}
 	stableBranches = []string{
 		"origin/master",
+		"origin/v1.12",
+		"origin/v1.11",
 		"origin/v1.10",
 		"origin/v1.9",
 		"origin/v1.8",
