@@ -43,6 +43,7 @@ var (
 		"clustermesh-apiserver-ci",
 		"docker-plugin-ci",
 		"hubble-relay-ci",
+		"kvstoremesh-ci",
 		"operator-ci",
 		"operator-generic-ci",
 		"operator-azure-ci",
